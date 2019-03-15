@@ -1,3 +1,5 @@
+<?php
+
 function getRealIP() {
             if (!empty($_SERVER['HTTP_CLIENT_IP']))
                 return $_SERVER['HTTP_CLIENT_IP'];
@@ -51,3 +53,4 @@ $fp = fopen( $archivo,"a+");
 $contador = fwrite($fp, date("d/m/Y H:i:s") . "\nIP: " . getRealIP() . "\nOS: " . $info["os"] . "\nBrowser: " . $info["browser"] . "\nVersion Browser: " . $info["version"] . "\nUser Agent HTTP: " . $_SERVER['HTTP_USER_AGENT'] . "\n\n");
 fclose($fp);
 
+?>
